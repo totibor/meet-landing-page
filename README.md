@@ -38,7 +38,7 @@ Users should be able to:
 
 ### What I learned
 
-
+`min-width: 0;`: This is important when using `flex-shrink`. For flex items and grid items, the minimum width value is either the specified suggested size, such as the value of the `width` property. Setting `min-width: 0;` overrides this, allowing the images to shrink below their intrinsic size when the flex container is too small.
 
 ### Continued development
 
