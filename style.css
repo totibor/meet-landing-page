@@ -55,7 +55,6 @@ html {
 
 body {
     background-color: var(--color-white);
-    padding: var(--spacing-400);
 }
 
 img {
@@ -63,10 +62,23 @@ img {
     block-size: auto;
 }
 
-main {
+header {
+    display: flex;
+    justify-content: center;
+}
+
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: var(--spacing-400);
+    padding-top: var(--spacing-800);
+}
+
+button {
+    padding: var(--spacing-200) var(--spacing-500);
+    border-radius: var(--spacing-400);
+    border-style: none;
 }
 
 /* Utility Classes */
@@ -114,6 +126,7 @@ main {
     margin: auto;
 }
 
+/* Custom classes */
 .text-preset-1 {
     font-family: var(--font-family);
     font-weight: var(--font-weight-black);
@@ -136,6 +149,7 @@ main {
     font-size: 1rem;
     line-height: 1.1;
     letter-spacing: 4px;
+    text-align: center;
     /* text-transform: uppercase; */
 }
 
@@ -173,7 +187,7 @@ main {
 
 .button-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: var(--spacing-200);
 }
