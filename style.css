@@ -126,6 +126,21 @@ button {
     margin: auto;
 }
 
+.flex {
+    display: flex;
+}
+
+.max-w-content {
+    max-width: max-content;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 448px;
+}
+
 /* Custom classes */
 .text-preset-1 {
     font-family: var(--font-family);
@@ -158,6 +173,7 @@ button {
     font-weight: var(--font-weight-medium);
     font-size: 1.125rem;
     line-height: 1.1;
+    text-align: center;
 }
 
 .text-preset-5 {
@@ -190,4 +206,16 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--spacing-200);
+}
+
+@media screen and (max-width: 768px) {
+    .text-preset-1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .text-preset-1 {
+        font-size: 2.5rem;
+    }
 }
