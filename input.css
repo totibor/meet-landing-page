@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
 @import "tailwindcss";
 
-:root {
+@theme {
   /* Colors */
   --color-cyan-600: #4d96a9;
   --color-cyan-300: #8fe3f9;
@@ -13,68 +13,43 @@
   --color-white: #fafafa;
 
   /* Typography */
-  --font-family: "Red Hat Display", sans-serif;
-  --font-weight-medium: 500;
-  --font-weight-black: 900;
-  --base-font-size: 16px;
-
-  /* Spacing */
-  --spacing-50: 4px;
-  --spacing-100: 8px;
-  --spacing-200: 16px;
-  --spacing-300: 24px;
-  --spacing-400: 32px;
-  --spacing-500: 40px;
-  --spacing-700: 56px;
-  --spacing-800: 64px;
-  --spacing-900: 72px;
-  --spacing-1000: 80px;
-  --spacing-1400: 112px;
+  --font-red-hat: "Red Hat Display", sans-serif;
 }
 
-html {
-  font-family: var(--font-family);
-  font-size: var(--base-font-size);
-}
+@layer components {
+  .text-preset-1 {
+    font-weight: var(--font-weight-black);
+    font-size: 4rem;
+    line-height: 1.1;
+    text-align: center;
+  }
 
-/* Custom classes */
-.text-preset-1 {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-black);
-  font-size: 4rem;
-  line-height: 1.1;
-  text-align: center;
-}
+  .text-preset-2 {
+    font-weight: var(--font-weight-black);
+    font-size: 2.5rem;
+    line-height: 1.1;
+    text-align: center;
+  }
 
-.text-preset-2 {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-black);
-  font-size: 2.5rem;
-  line-height: 1.1;
-  text-align: center;
-}
+  .text-preset-3 {
+    font-weight: var(--font-weight-black);
+    font-size: 1rem;
+    line-height: 1.1;
+    letter-spacing: 4px;
+    text-align: center;
+    /* text-transform: uppercase; */
+  }
 
-.text-preset-3 {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-black);
-  font-size: 1rem;
-  line-height: 1.1;
-  letter-spacing: 4px;
-  text-align: center;
-  /* text-transform: uppercase; */
-}
+  .text-preset-4 {
+    font-weight: var(--font-weight-medium);
+    font-size: 1.125rem;
+    line-height: 1.1;
+    text-align: center;
+  }
 
-.text-preset-4 {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-medium);
-  font-size: 1.125rem;
-  line-height: 1.1;
-  text-align: center;
-}
-
-.text-preset-5 {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-black);
-  font-size: 1rem;
-  line-height: 1.5;
+  .text-preset-5 {
+    font-weight: var(--font-weight-black);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
