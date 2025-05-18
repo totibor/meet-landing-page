@@ -16,45 +16,39 @@
   --font-red-hat: "Red Hat Display", sans-serif;
 }
 
+@layer base {
+  html {
+    line-height: 1.1;
+  }
+}
+
 @layer components {
   .text-preset-1 {
-    font-weight: var(--font-weight-black);
-    font-size: 4rem;
-    line-height: 1.1;
-    text-align: center;
+    @apply text-[2.5rem] md:text-5xl lg:text-[4rem];
+    @apply font-black text-center;
   }
 
   .text-preset-2 {
-    font-weight: var(--font-weight-black);
-    font-size: 2.5rem;
-    line-height: 1.1;
-    text-align: center;
+    @apply text-[2rem] md:text-[36px] lg:text-[2.5rem];
+    @apply font-black text-center;
   }
 
   .text-preset-3 {
-    font-weight: var(--font-weight-black);
-    font-size: 1rem;
-    line-height: 1.1;
-    letter-spacing: 4px;
-    text-align: center;
-    /* text-transform: uppercase; */
+    @apply text-[0.75rem] md:text-sm lg:text-[1rem];
+    @apply font-black text-center tracking-[4px];
   }
 
   .text-preset-4 {
-    font-weight: var(--font-weight-medium);
-    font-size: 1.125rem;
-    line-height: 1.1;
-    text-align: center;
+    @apply text-base lg:text-lg;
+    @apply font-medium text-center;
   }
 
   .text-preset-5 {
-    font-weight: var(--font-weight-black);
-    font-size: 1rem;
-    line-height: 1.5;
+    @apply text-base;
+    @apply font-black leading-[1.5];
   }
 
   .btn {
-    padding-inline: 40px;
-    padding-block: 16px;
+    @apply px-10 py-4 rounded-4xl;
   }
 }
