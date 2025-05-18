@@ -11,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "five-server": "^0.4.4"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "tailwindcss": "^4.1.7"
   }
 }
