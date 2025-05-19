@@ -20,6 +20,10 @@
   html {
     line-height: 1.1;
   }
+
+  button {
+    @apply px-10 py-4 rounded-4xl;
+  }
 }
 
 @layer components {
@@ -46,9 +50,5 @@
   .text-preset-5 {
     @apply text-base;
     @apply font-black leading-[1.5];
-  }
-
-  .btn {
-    @apply px-10 py-4 rounded-4xl;
   }
 }
