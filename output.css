@@ -180,6 +180,15 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -198,11 +207,17 @@
       max-width: 96rem;
     }
   }
+  .-mx-8 {
+    margin-inline: calc(var(--spacing) * -8);
+  }
   .mx-auto {
     margin-inline: auto;
   }
   .my-16 {
     margin-block: calc(var(--spacing) * 16);
+  }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
   }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
@@ -225,8 +240,14 @@
   .grid {
     display: grid;
   }
+  .h-\[330px\] {
+    height: 330px;
+  }
   .h-auto {
     height: auto;
+  }
+  .w-screen {
+    width: 100vw;
   }
   .max-w-full {
     max-width: 100%;
@@ -270,11 +291,32 @@
   .bg-cyan-600 {
     background-color: var(--color-cyan-600);
   }
+  .bg-cyan-600\/90 {
+    background-color: color-mix(in srgb, #4d96a9 90%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-cyan-600) 90%, transparent);
+    }
+  }
   .bg-purple-600 {
     background-color: var(--color-purple-600);
   }
+  .bg-\[url\(\'\.\/assets\/mobile\/image-footer\.jpg\'\)\] {
+    background-image: url('./assets/mobile/image-footer.jpg');
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-center {
+    background-position: center;
+  }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
+  }
   .p-8 {
     padding: calc(var(--spacing) * 8);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
   }
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
@@ -290,6 +332,9 @@
   }
   .font-red-hat {
     font-family: var(--font-red-hat);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
   }
   .text-cyan-300 {
     color: var(--color-cyan-300);
@@ -317,6 +362,11 @@
   .md\:gap-6 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:bg-\[url\(\'\.\/assets\/tablet\/image-footer\.jpg\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('./assets/tablet/image-footer.jpg');
     }
   }
   .md\:pt-14 {
@@ -347,6 +397,11 @@
   .lg\:gap-8 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 8);
+    }
+  }
+  .lg\:bg-\[url\(\'\.\/assets\/desktop\/image-footer\.jpg\'\)\] {
+    @media (width >= 64rem) {
+      background-image: url('./assets/desktop/image-footer.jpg');
     }
   }
   .lg\:text-left {

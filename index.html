@@ -64,17 +64,22 @@
       </div>
     </section>
   </main>
-  <footer class="flex flex-col items-center">
-    <div class="text-preset-5">02</div>
-    <div class="flex flex-col gap-6 lg:flex-row items-center">
-      <h2 class="text-preset-2 lg:text-left">Experience more together</h2>
-      <p class="text-preset-4 lg:text-left">
-        Stay connected with reliable HD meetings and unlimited one-on-one and
-        group video sessions.
-      </p>
-      <button class="btn text-preset-5 bg-purple-600 text-white">
-        Download <span class="text-purple-300">v1.3</span>
-      </button>
+  <footer
+    class="flex flex-col items-center relative bg-[url('./assets/mobile/image-footer.jpg')] md:bg-[url('./assets/tablet/image-footer.jpg')] lg:bg-[url('./assets/desktop/image-footer.jpg')] bg-cover bg-no-repeat bg-center w-screen h-[330px] mt-8 -mx-8">
+    <div class="absolute inset-0 bg-cyan-600/90"></div>
+    <!-- Wrap content en relative container to appear above overlay -->
+    <div class="relative text-white px-8">
+      <div class="text-preset-5">02</div>
+      <div class="flex flex-col gap-6 lg:flex-row items-center">
+        <h2 class="text-preset-2 lg:text-left">Experience more together</h2>
+        <p class="text-preset-4 lg:text-left">
+          Stay connected with reliable HD meetings and unlimited one-on-one and
+          group video sessions.
+        </p>
+        <button class="btn text-preset-5 bg-purple-600 text-white">
+          <span class="whitespace-nowrap">Download <span class="text-purple-300">v1.3</span></span>
+        </button>
+      </div>
     </div>
   </footer>
 </body>
